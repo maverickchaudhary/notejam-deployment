@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notejam-flask
+  namespace: notejam-flask
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: notejam-flask
+  template:
+    metadata:
+      labels:
+        app: notejam-flask
+    spec:
+      containers:
+      - name: notejam-flask
+        image: maverick0803/spinint3notejamdev:3.0
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 5000

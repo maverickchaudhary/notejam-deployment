@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: notejam-flask-rollout
+  namespace: notejam-flask-rollout
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notejam-flask-rollout
+  template:
+    metadata:
+      labels:
+        app: notejam-flask-rollout
+    spec:
+      containers:
+      - name: notejam-flask-rollout
+        image: maverick0803/spinint3notejamdev:3.0
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 5000
+  strategy:
+    blueGreen:
+      activeService: notejam-flask-rollout-svc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: notejam-flask-rollout-svc
+spec:
+  selector:
+    app: notejam-flask-rollout
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
