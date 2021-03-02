@@ -13,7 +13,7 @@ patches:
 
 images:
 - name: maverick0803/spinint3notejamdev
-  newTag: "3"
+  newTag: "4"
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
