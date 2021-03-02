@@ -20,9 +20,14 @@ spec:
         ports:
          - containerPort: 5000
   strategy:
-    blueGreen:
-      activeService: notejam-flask
-      previewService: notejam-flask-rollout-svc
+    canary:
+      steps:
+      - setWeight: 20
+      - pause:
+          duration: "30s"
+      - setWeight: 50
+      - pause:
+          duration: "30s"
 
 ---
 apiVersion: v1
