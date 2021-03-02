@@ -3,10 +3,8 @@ kind: Kustomization
 
 namePrefix: kustomize-
 
-configurations:
-  - deployment-rollout.yaml
-
 resources:
 - notejam-ingress.yaml
 - notejam-service.yaml
 - deployment.yaml
+- deployment-rollout.yaml
