@@ -8,5 +8,5 @@ configurations:
 
 resources:
 - notejam-ingress.yaml
-- notejam-service.yaml
-- deployment.yaml
+# - notejam-service.yaml
+- deployment-rollout.yaml
