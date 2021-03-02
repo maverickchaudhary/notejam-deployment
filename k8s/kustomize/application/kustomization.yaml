@@ -3,6 +3,9 @@ kind: Kustomization
 
 namePrefix: kustomize-
 
+configurations:
+- rollout-transform.yaml
+
 resources:
 - notejam-ingress.yaml
 - notejam-service.yaml
