@@ -4,7 +4,7 @@ kind: Kustomization
 namePrefix: kustomize-
 
 configurations:
-  - https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
+  - deployment-rollout.yaml
 
 resources:
 - notejam-ingress.yaml
