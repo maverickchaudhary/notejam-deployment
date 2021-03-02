@@ -2,7 +2,7 @@
 # - deployment-rollout.yaml
 
 configurations:
-- https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
+- rollout-transform.yaml
 
 images:
 - name: maverick0803/spinint3notejamdev
