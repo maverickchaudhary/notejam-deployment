@@ -2,7 +2,7 @@
 # - deployment-rollout.yaml
 
 configurations:
-- ../../../rollout-transform.yaml
+- ../../rollout-transform.yaml
 
 images:
 - name: maverick0803/spinint3notejamdev
