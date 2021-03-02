@@ -21,7 +21,8 @@ spec:
          - containerPort: 5000
   strategy:
     blueGreen:
-      activeService: notejam-flask-rollout-svc
+      activeService: notejam-flask
+      previewService: notejam-flask-rollout-svc
 
 ---
 apiVersion: v1
