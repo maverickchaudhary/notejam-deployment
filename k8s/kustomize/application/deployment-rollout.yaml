@@ -4,7 +4,7 @@ metadata:
   name: notejam-flask-rollout
   namespace: notejam-flask-rollout
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: notejam-flask-rollout
