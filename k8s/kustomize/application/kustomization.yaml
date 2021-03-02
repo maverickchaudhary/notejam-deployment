@@ -10,4 +10,3 @@ resources:
 - notejam-ingress.yaml
 - notejam-service.yaml
 - deployment.yaml
-- deployment-rollout.yaml
